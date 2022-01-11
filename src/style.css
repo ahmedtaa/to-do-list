@@ -7,14 +7,15 @@
   --lato: lato, sans-serif;
 }
 
-.hello {
-  color: blue;
+body {
+  margin: 50px 500px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
+  box-shadow: 5px 10px 8px #888;
 }
 
 .row {
