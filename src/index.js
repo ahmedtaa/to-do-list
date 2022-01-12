@@ -18,7 +18,7 @@ const listData = [
   },
 ];
 
-let listMarkUp = `
+let listMarkUp = 
         <div class="row title">
             <p>Today's To Do</p>
             <i class="fas fa-sync"></i>
