@@ -38,12 +38,10 @@ const display = () => {
   }));
 
   selectorAll('.input_task').forEach((e) => e.addEventListener('keyup', (event) => {
-    console.log(e.dataset);
     updateTask(event, e.dataset.id);
   }));
 
   selectorAll('.checkbox_task').forEach((e) => e.addEventListener('change', () => {
-    console.log(e.dataset.id);
     updateStatus(e.dataset.id);
   }));
 };

@@ -4,7 +4,6 @@ export default class DisplayManager {
   };
 
   static displayTask = (parent, task) => {
-    // console.log(parent, task);
     const taskDiv = DisplayManager.createHtml(parent, 'div', 'task');
     taskDiv.dataset.id = task.index;
 
