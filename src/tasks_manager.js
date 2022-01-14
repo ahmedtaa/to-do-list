@@ -7,6 +7,8 @@ export default class TasksManager {
     this.tasks = StorageManager.load();
   }
 
+  // addCompleted = ()=>
+
   getTasks = () => this.tasks.sort((a, b) => a.index - b.index);
 
   getTask = (index) => this.tasks[index - 1];
