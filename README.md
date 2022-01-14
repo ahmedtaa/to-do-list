@@ -2,7 +2,7 @@
 
 # TO DO LIST
 
-Additional description about the project and its features.
+An interactive list clone of [getminimalist.com](https://www.getminimalist.com/)
 
 ## Getting Started
 
