@@ -1,15 +1,26 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Webpack Templte
+# TO DO LIST
 
-Additional description about the project and its features.
+An interactive list clone of [getminimalist.com](https://www.getminimalist.com/)
 
 ## Getting Started
 
-after cloneing
+clone
+
+```
+git clone git@github.com:ahmedtaa/to-do-list.git YOUR_DIRECTORY_NAME
+```
+
+after cloneing run the following line to install all dependencies
 
 ```
 npm install
+```
+
+to start the server
+
+```
 npm start
 ```
 
