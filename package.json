@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
+    "@testing-library/jest-dom": "^5.16.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.4.6",
     "css-loader": "^6.5.1",
@@ -45,6 +46,7 @@
     "webpack-dev-server": "^4.7.2"
   },
   "dependencies": {
+    "jsdom": "^19.0.0",
     "lodash": "^4.17.21"
   }
 }
