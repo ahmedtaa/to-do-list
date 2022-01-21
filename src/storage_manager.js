@@ -1,3 +1,6 @@
+import LocalStorage from './localstorage-mock';
+
+global.localStorage = new LocalStorage();
 export default class StorageManager {
   static save = (tasks) => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
