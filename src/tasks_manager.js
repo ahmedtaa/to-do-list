@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Task from './Task';
 import StorageManager from './storage_manager';
 import StatusManager from './status_manager';
@@ -6,8 +7,6 @@ export default class TasksManager {
   constructor() {
     this.tasks = StorageManager.load();
   }
-
-  // addCompleted = ()=>
 
   getTasks = () => this.tasks.sort((a, b) => a.index - b.index);
 
@@ -30,6 +29,8 @@ export default class TasksManager {
       } else if (i > taskIndex) {
         t.index = i;
         newTasks.push(t);
+      } else {
+        throw new Error('Index was not deleted');
       }
     });
     this.tasks = newTasks;

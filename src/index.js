@@ -99,3 +99,5 @@ input.addEventListener('keyup', ({ key }) => {
 selector('.fa-level-down-alt').addEventListener('click', () => createTask());
 
 display();
+
+module.exports = { deleteTask, createTask };
