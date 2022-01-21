@@ -12,7 +12,7 @@ const updateTask = (event, index, focus = false) => {
     manager.updateTask(
       index,
       selector(`.task_${index}`).value,
-      selector(`.task_${index}_checkbox`).checked
+      selector(`.task_${index}_checkbox`).checked,
     );
     selector('.add_task input').focus();
   }
@@ -21,7 +21,7 @@ const updateTask = (event, index, focus = false) => {
 const updateStatus = (index) => {
   manager.updateStatus(index, selector(`.task_${index}_checkbox`).checked);
   selector(`.task[data-id='${index}'] .input_task`).classList.toggle(
-    'completed'
+    'completed',
   );
 };
 
@@ -32,41 +32,31 @@ const display = () => {
     .getTasks()
     .forEach((task) => DisplayManager.displayTask(selector('.tasks'), task));
 
-  selectorAll('.fa-trash').forEach((e) =>
-    e.addEventListener('click', () => {
-      // eslint-disable-next-line no-use-before-define
-      deleteTask(e.dataset.id);
-    })
-  );
+  selectorAll('.fa-trash').forEach((e) => e.addEventListener('click', () => {
+    // eslint-disable-next-line no-use-before-define
+    deleteTask(e.dataset.id);
+  }));
 
-  selectorAll('.input_task').forEach((e) =>
-    e.addEventListener('keyup', (event) => {
-      updateTask(event, e.dataset.id);
-    })
-  );
+  selectorAll('.input_task').forEach((e) => e.addEventListener('keyup', (event) => {
+    updateTask(event, e.dataset.id);
+  }));
 
-  selectorAll('.checkbox_task').forEach((e) =>
-    e.addEventListener('change', () => {
-      updateStatus(e.dataset.id);
-    })
-  );
+  selectorAll('.checkbox_task').forEach((e) => e.addEventListener('change', () => {
+    updateStatus(e.dataset.id);
+  }));
 };
 
 const deleteTask = (index) => {
   manager.deleteTask(index);
   display();
 
-  selectorAll('.input_task').forEach((e) =>
-    e.addEventListener('keyup', (event) => {
-      updateTask(event, e.dataset.id);
-    })
-  );
+  selectorAll('.input_task').forEach((e) => e.addEventListener('keyup', (event) => {
+    updateTask(event, e.dataset.id);
+  }));
 
-  selectorAll('.input_task').forEach((e) =>
-    e.addEventListener('focusout', (event) => {
-      updateTask(event, e.dataset.id, true);
-    })
-  );
+  selectorAll('.input_task').forEach((e) => e.addEventListener('focusout', (event) => {
+    updateTask(event, e.dataset.id, true);
+  }));
 };
 
 const createTask = () => {
@@ -86,7 +76,7 @@ const createTask = () => {
     'focusout',
     (event) => {
       updateTask(event, task.index, true);
-    }
+    },
   );
 
   selector(`#checkbox_task_${task.index}`).addEventListener('change', () => {
