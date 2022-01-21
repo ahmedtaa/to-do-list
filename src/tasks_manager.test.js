@@ -1,4 +1,3 @@
-// import TasksManager from './tasks_manager';
 import LocalStorage from './localstorage-mock';
 
 global.localStorage = new LocalStorage();

@@ -1,6 +1,3 @@
-// describe for delete;
-// describe for create;
-
 import Task from './Task';
 
 describe('create Task', () => {
